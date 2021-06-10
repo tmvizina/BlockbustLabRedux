@@ -8,14 +8,16 @@ namespace BlockBusterLab
     {
 
         public List<Movie> Movies { get; set; } = new List<Movie>();
+        
 
-       // You can intiialize a value but you can't call methods outside of methods within a class
-       // Movies.Add(new VHS("Die Hard", Movie.Genre.Action, 134, DieHardScenes));
+        // You can intiialize a value but you can't call methods outside of methods within a class
+        // Movies.Add(new VHS("Die Hard", Movie.Genre.Action, 134, DieHardScenes));
 
         public  Blockbuster()
         {
            
-            List<Movie> Movies = new List<Movie>();
+            List<Movie> movies = new List<Movie>();
+          
 
             //DVD
             List<string> ShrekScenes = new List<string>();
@@ -145,35 +147,35 @@ namespace BlockBusterLab
             nightmareScenes.Add(nightmare2);
             nightmareScenes.Add(nightmare3);
 
-            Movies.Add(shrek);
-            Movies.Add(diehard);
-            Movies.Add(LOTR);
-            Movies.Add(nightmare);
-            Movies.Add(nemo);
-            Movies.Add(spaceballs);
+            movies.Add(shrek);
+            movies.Add(diehard);
+            movies.Add(LOTR);
+            movies.Add(nightmare);
+            movies.Add(nemo);
+            movies.Add(spaceballs);
 
-
+              this.Movies = movies;
     }
 
-        public  void PrintMovies()
+        public  void PrintMovies(List<Movie> movies)
         {
            
 
-            for (int i = 0; i < this.Movies.Count; i++)
+            for (int i = 0; i < movies.Count; i++)
             {
-                Console.WriteLine($"{i}). {this.Movies[i].Name}");
+                Console.WriteLine($"{i}). {movies[i].Name}");
             }
         }
 
         public Movie CheckOut()
         {
-            PrintMovies();
+            //PrintMovies();
 
             Console.WriteLine("Which Movie would you like to check out? ");
 
             int movieChosen = int.Parse(Console.ReadLine());
 
-            Movies[movieChosen].PrintInfo(this.Movies[movieChosen].Name, this.Movies[movieChosen].genre, this.Movies[movieChosen].Runtime);
+            this.Movies[movieChosen].PrintInfo(this.Movies[movieChosen].Name, this.Movies[movieChosen].genre, this.Movies[movieChosen].Runtime);
 
             return Movies[movieChosen];
         }

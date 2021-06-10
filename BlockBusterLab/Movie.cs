@@ -33,16 +33,18 @@ namespace BlockBusterLab
         //This is the constructer method that combines all the data
         public Movie(string name, Genre genre, int runtime, List<string> scenes)
         {
-            //Name = name;
+            Name = name;
 
-            //this.genre = genre;
+            this.genre = genre;
 
-            //Runtime = runtime;
+            Runtime = runtime;
 
-            //List<string>Scenes=new List<string>();
+            List<string>Scenes=new List<string>();
         }
 
         public abstract void Play();
+
+        public abstract void PlayWholeMovie(List<string> scenes);
 
         public virtual void PrintInfo(string name, Genre genre, int runtime)
         {

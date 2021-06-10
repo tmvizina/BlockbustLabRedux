@@ -32,7 +32,7 @@ namespace BlockBusterLab
             currenttime = 0;
         }
 
-        public void PlayWholeMovie(List<string> scenes)
+        public override void PlayWholeMovie(List<string> scenes)
         {
             Console.WriteLine("Piracy is not a victimless crime! You wouldn't download a car!");
             for (int i = 0; i < scenes.Count; i++)
