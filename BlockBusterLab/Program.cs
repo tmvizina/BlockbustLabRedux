@@ -35,14 +35,8 @@ namespace BlockBusterLab
             }
             else 
             {
-                Console.WriteLine("Maybe when you get Home");
+                Console.WriteLine("Maybe when you get home then, Have a great night");
             }
-
-
-
-         //   if 
-           // Console.WriteLine("Would you like to play the whole movie or Scene Select);
-
 
 
         }
